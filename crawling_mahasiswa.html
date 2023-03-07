@@ -1,0 +1,1485 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahasiswa &#8212; Projek Sains Data</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'crawling_mahasiswa';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="crawling_cakimin.html">
+                        Cakimin
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="crawling_berita.html">
+                        Berita
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="crawling_cakimin.html">
+                        Cakimin
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="crawling_berita.html">
+                        Berita
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="crawling_cakimin.html">Cakimin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling_berita.html">Berita</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://colab.research.google.com/github/billymorgen/prosaindata/blob/gh-pages/_sources/crawling_mahasiswa.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/billymorgen/prosaindata" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/billymorgen/prosaindata/issues/new?title=Issue%20on%20page%20%2Fcrawling_mahasiswa.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="_sources/crawling_mahasiswa.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mahasiswa</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <div class="tex2jax_ignore mathjax_ignore section" id="mahasiswa">
+<h1>Mahasiswa<a class="headerlink" href="#mahasiswa" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span> <span class="n">beautifulsoup4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (2.25.1)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (4.6.3)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.8/dist-packages (from requests) (2.10)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests) (4.0.0)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.8/dist-packages (from requests) (1.26.14)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.8/dist-packages (from requests) (2022.12.7)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># URL Studentsite UG</span>
+<span class="n">url_ss</span> <span class="o">=</span> <span class="s1">&#39;https://pta.trunojoyo.ac.id/&#39;</span>
+
+<span class="n">laman_ss</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url_ss</span><span class="p">)</span>
+<span class="c1"># jika sukses, maka status query ini adalah 200, alias OK</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Status GET laman SS UG: </span><span class="si">{</span><span class="n">laman_ss</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Status GET laman SS UG: 200
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cetak HTML</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">laman_ss</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;&lt;!DOCTYPE html&gt;\n\n&lt;html&gt;\n\n&lt;head&gt;\n\t&lt;meta charset=&quot;utf-8&quot;/&gt;\n\t&lt;title&gt;Portal Tugas Akhir Univ. Trunojoyo&lt;/title&gt;\n\t&lt;link rel=&quot;stylesheet&quot; href=&quot;https://pta.trunojoyo.ac.id/css/reset.css&quot; type=&quot;text/css&quot;/&gt;\n\t&lt;link rel=&quot;stylesheet&quot; href=&quot;https://pta.trunojoyo.ac.id/css/style.css&quot; type=&quot;text/css&quot;/&gt;\n\t&lt;link rel=&quot;stylesheet&quot; href=&quot;https://pta.trunojoyo.ac.id/css/960_12_col.css&quot; type=&quot;text/css&quot;/&gt;\n\t&lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;https://pta.trunojoyo.ac.id/css/smoothness/jquery-ui-1.8.18.custom.css&quot; /&gt;\n\n\t&lt;!--[if lte IE 8]&gt; &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/ie.css&quot; /&gt; &lt;![endif]--&gt;\n\t\n    &lt;!-- favicon --&gt;\n    &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://pta.trunojoyo.ac.id/images/favicon.ico&quot;/&gt;\n\t\n\t&lt;!-- javascript --&gt;\n\t&lt;script type=&quot;text/javascript&quot; src=&quot;https://pta.trunojoyo.ac.id/js/jquery-1.7.1.min.js&quot;&gt;&lt;/script&gt;\n\t&lt;script type=&quot;text/javascript&quot; src=&quot;https://pta.trunojoyo.ac.id/js/jquery.validate.js&quot;&gt;&lt;/script&gt;\n\t&lt;script type=&quot;text/javascript&quot; src=&quot;https://pta.trunojoyo.ac.id/js/jquery.form.js&quot;&gt;&lt;/script&gt;\n\t&lt;script type=&quot;text/javascript&quot; src=&quot;https://pta.trunojoyo.ac.id/js/datepicker/js/jquery-ui-1.8.16.custom.min.js&quot;&gt;&lt;/script&gt;\n\t&lt;script type=&quot;text/javascript&quot; src=&quot;https://pta.trunojoyo.ac.id/js/datepicker/js/jquery.ui.datepicker-id.js&quot;&gt;&lt;/script&gt;\n\t\n\t&lt;!--[if lte IE 7]&gt;\n\t&lt;script type=&quot;text/javascript&quot;&gt;\n\t\t// Make menu 2 level, fix for IE &lt; 7\n\t\t$(document).ready(function(){\n\t\t\t$(&quot;#sidebar ul li&quot;).mouseover(function(){\n\t\t\t\tvar w = $(this).width()+\&#39;px\&#39;;\t\t\t\t\n\t\t\t\t$(this).find(&quot;ul&quot;).css(\&#39;left\&#39;,w);\n\t\t\t});\n\t\t\t$(&quot;#sidebar ul li&quot;).mouseout(function(){\n\t\t\t\t$(this).find(&quot;ul&quot;).css(\&#39;left\&#39;,\&#39;-9999px\&#39;);\n\t\t\t});\n\t\t});\n\t&lt;/script&gt;\n\t &lt;![endif]--&gt;\n\t&lt;meta name=&quot;google-site-verification&quot; content=&quot;fjT5XAQAmDWjsF1Tn4-az3Hum8OJQjfh1kqmrjecf00&quot; /&gt; \n&lt;/head&gt;\n\n&lt;body&gt;\n\t&lt;div id=&quot;transBox&quot;&gt;\n\t\t&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/loading.gif&quot;&gt;\n\t&lt;/div&gt;\n\t\n\t&lt;div id=&quot;wrapper&quot;&gt;\n\t\t&lt;header id=&quot;header&quot;&gt;\n\t\t\t&lt;a id=&quot;logo&quot; href=&quot;index.html&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/logo.png&quot; alt=&quot;Mirage&quot;/&gt;&lt;/a&gt;\n\t\t\t\n\t\t\t&lt;div id=&quot;counts&quot;&gt;\n\t\t\t\t\t\t\t\t&lt;div&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;number&quot;&gt;14678&lt;/span&gt;&lt;span class=&quot;follow&quot;&gt;Journal&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;\t\t\t\t\n\t\t\t\t&lt;!--\n\t\t\t\t&lt;div&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;number&quot;&gt;877&lt;/span&gt;&lt;span class=&quot;like&quot;&gt;Like&lt;/span&gt;s&lt;/a&gt;&lt;/div&gt;\n\t\t\t\t&lt;hr/&gt;\n\t\t\t\t&lt;div&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;number&quot;&gt;7.418&lt;/span&gt;&lt;span class=&quot;subscribe&quot;&gt;Subscribe&lt;/span&gt;rs&lt;/a&gt;&lt;/div&gt;\n\t\t\t\t--&gt;\n\t\t\t&lt;/div&gt;\n\t\t\t\n\t\t\t&lt;nav&gt;\n\t\t\t\t&lt;ul id=&quot;topnav&quot;&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/&quot;&gt;&lt;span&gt;Beranda&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/&quot;&gt;&lt;span&gt;Pencarian&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_template/&quot;&gt;&lt;span&gt;Download&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://library.trunojoyo.ac.id/detil.php?id=23&quot;&gt;&lt;span&gt;Petunjuk Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;!--\t\t\t\t\t\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;c_sugestion/&quot;&gt;&lt;span&gt;Saran &amp; Kritik&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;\n--&gt;\t\t\t\t\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_contact/&quot;&gt;&lt;span&gt;Kontak&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t&lt;/ul&gt;\n\t\t\t&lt;/nav&gt;\n\t\t\t\n\t\t&lt;/header&gt;\n\n\t\t&lt;div id=&quot;content&quot; class=&quot;has_sidebar right&quot;&gt;\n\t\t\t&lt;div id=&quot;begin&quot; class=&quot;inner&quot;&gt;\n\n\n\t\t\t\t&lt;h2&gt;Daftar Karya Ilmiah&lt;/h2&gt;\n&lt;/div&gt; &lt;!-- begin --&gt;\n&lt;div id=&quot;content_journal&quot;&gt;\n\n\t\t\t&lt;ul class=&quot;items list_style&quot;&gt;\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t&lt;li data-id=&quot;id-1&quot; data-cat=&quot;#luxury&quot;&gt;\n\t\t\t\t\t&lt;!-- &lt;div class=&quot;preview&quot; style=&quot;float:left;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;frame&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/portfolio/06.jpg&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/div&gt; --&gt;\n\t\t\t\t\t&lt;div style=&quot;float:left; width:auto&quot;&gt;\n\t\t\t\t\t\t&lt;a class=&quot;title&quot; href=&quot;#&quot;&gt;STRATEGI PENGEMBANGAN MAKANAN DAN MINUMAN KHAS PULAU GILIGENTING GUNA MENDUKUNG PARIWISATA BERKELANJUTAN&lt;/a&gt;\n\t\t\t\t\t\t&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Penulis : Mohammad Maskur&lt;/span&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing I : Dr. Akhmad Farid, S.Pi., MT&lt;/span&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing II :Dr. Apri Arisandi, S.Pi., M.Si&lt;/span&gt;&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;\n\t\t\t\t\t\n\t\t\t\t\t&lt;div style=&quot;margin: 15px 15px 15px 15px;&quot;&gt;\n\t\t\t\t\t\t&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraksi&lt;/b&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div&gt;\n\t\t\t\t\t\t\t&lt;p align=&quot;justify&quot;&gt;Makanan dan minuman khas merupakan ciri dari kekayaan sumberdaya alam dari suatu daerah, pentingnya memaksimalkan pariwisata Pulau Giligenting ditunjang dengan&amp;#8230;&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t\n\t\t\t\t\t\t&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraction&lt;/b&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div&gt;\n\t\t\t\t\t\t\t&lt;p align=&quot;justify&quot;&gt;Typical food and drinks are characteristic of the richness of natural resources of an area, the importance of maximizing Giligenting&amp;#8230;&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;\n\t\t\t\t\t\t\t&lt;a href=&quot;https://pta.trunojoyo.ac.id/welcome/detail/170361100003&quot; class=&quot;gray button&quot;&gt;&lt;span&gt;Selengkapnya&lt;/span&gt;&lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/button/forward.png&quot;&gt;&lt;/a&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/li&gt;\n\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t&lt;li data-id=&quot;id-1&quot; data-cat=&quot;#luxury&quot;&gt;\n\t\t\t\t\t&lt;!-- &lt;div class=&quot;preview&quot; style=&quot;float:left;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;frame&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/portfolio/06.jpg&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/div&gt; --&gt;\n\t\t\t\t\t&lt;div style=&quot;float:left; width:auto&quot;&gt;\n\t\t\t\t\t\t&lt;a class=&quot;title&quot; href=&quot;#&quot;&gt;PERUMUSAN SANKSI PIDANA BAGI MASYARAKAT SEKITAR HUTAN YANG MELAKUKAN PENCURIAN KAYU MILIK NEGARA DALAM UNDANG-UNDANG NOMOR 18 TAHUN 2013&lt;/a&gt;\n\t\t\t\t\t\t&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Penulis : Moch. Steven&lt;/span&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing I : Dr. Wartiningsih, S.H., M.Hum&lt;/span&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing II :&lt;/span&gt;&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;\n\t\t\t\t\t\n\t\t\t\t\t&lt;div style=&quot;margin: 15px 15px 15px 15px;&quot;&gt;\n\t\t\t\t\t\t&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraksi&lt;/b&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div&gt;\n\t\t\t\t\t\t\t&lt;p align=&quot;justify&quot;&gt;ABSTRAK\nAkhir-akhir ini semakin maraknya pencurian kayu milik negara di sekitar hutan oleh masyarakat. akan tetapi perumusan sanksi pidana dalam&amp;#8230;&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t\n\t\t\t\t\t\t&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraction&lt;/b&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div&gt;\n\t\t\t\t\t\t\t&lt;p align=&quot;justify&quot;&gt;ABSTRACK\nLately, there has been more and more rampant robbery of state timber around the forest by the community. However,&amp;#8230;&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;\n\t\t\t\t\t\t\t&lt;a href=&quot;https://pta.trunojoyo.ac.id/welcome/detail/170111100053&quot; class=&quot;gray button&quot;&gt;&lt;span&gt;Selengkapnya&lt;/span&gt;&lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/button/forward.png&quot;&gt;&lt;/a&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/li&gt;\n\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t&lt;li data-id=&quot;id-1&quot; data-cat=&quot;#luxury&quot;&gt;\n\t\t\t\t\t&lt;!-- &lt;div class=&quot;preview&quot; style=&quot;float:left;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;frame&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/portfolio/06.jpg&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/div&gt; --&gt;\n\t\t\t\t\t&lt;div style=&quot;float:left; width:auto&quot;&gt;\n\t\t\t\t\t\t&lt;a class=&quot;title&quot; href=&quot;#&quot;&gt;Peran Teor Motivasi Herzberg Sebagai Mediator Self Efficacy, Lingkungan Kerja Dalam Meningkatkan Prestasi Kerja Pegawai ( Kantor Jasa Penilai Publik Guntur Eki Andri dan Rekan Kota Surabaya )&lt;/a&gt;\n\t\t\t\t\t\t&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Penulis : Widha Deby Andrea&lt;/span&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing I : Mochammad Isa Anshori, S.E., M.Si.&lt;/span&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing II :&lt;/span&gt;&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;\n\t\t\t\t\t\n\t\t\t\t\t&lt;div style=&quot;margin: 15px 15px 15px 15px;&quot;&gt;\n\t\t\t\t\t\t&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraksi&lt;/b&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div&gt;\n\t\t\t\t\t\t\t&lt;p align=&quot;justify&quot;&gt;Penelitian ini bertujuan untuk dapat mengetahui tentang pengaruh motivasi kerja sebagai mediator self efficacy dan lingkungan kerja terhadap prestasi kerja&amp;#8230;&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t\n\t\t\t\t\t\t&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraction&lt;/b&gt;&lt;/div&gt;\n\t\t\t\t\t\t&lt;div&gt;\n\t\t\t\t\t\t\t&lt;p align=&quot;justify&quot;&gt;This study aims to find out about the effect of work motivation as a mediator of self efficacy and work&amp;#8230;&lt;/p&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;\n\t\t\t\t\t\t\t&lt;a href=&quot;https://pta.trunojoyo.ac.id/welcome/detail/160211100116&quot; class=&quot;gray button&quot;&gt;&lt;span&gt;Selengkapnya&lt;/span&gt;&lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/button/forward.png&quot;&gt;&lt;/a&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/li&gt;\n\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t&lt;/ul&gt;\n\t\t\t\n\t\t\t&lt;div id=&quot;end&quot; class=&quot;inner&quot;&gt;\n\t\t\t\t&lt;ol class=&quot;pagination&quot;&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a class=&quot;pag_button selected&quot;&gt;1&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class=pag_button href=&quot;https://pta.trunojoyo.ac.id/welcome/index/2&quot;&gt;2&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class=pag_button href=&quot;https://pta.trunojoyo.ac.id/welcome/index/3&quot;&gt;3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class=pag_button href=&quot;https://pta.trunojoyo.ac.id/welcome/index/2&quot;&gt;&amp;gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class=pag_button href=&quot;https://pta.trunojoyo.ac.id/welcome/index/4893&quot;&gt;&amp;raquo;&lt;/a&gt;&lt;/li&gt;\t\t\t\t\t\n\t\t\t\t&lt;/ol&gt;\n\t\t\t&lt;/div&gt; &lt;!-- end --&gt;\n&lt;/div&gt;\t\t&lt;/div&gt; &lt;!-- content --&gt;\n\n\t\t&lt;div id=&quot;sidebar&quot; class=&quot;left&quot;&gt;\n\t\t\t&lt;div class=&quot;box sidebar_nav&quot;&gt;\n\t\t\t\t&lt;h5&gt;Journal&lt;/h5&gt;\n\t\t\t\t&lt;ul&gt;\n\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/1&quot;&gt;Hukum&lt;/a&gt;\n\t\t\t\t\t&lt;ul&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/1&quot;&gt;Ilmu Hukum&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/24&quot;&gt;Magister Ilmu Hukum&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;/ul&gt;\n\t\t\t\t&lt;/li&gt;\n\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/2&quot;&gt;Pertanian&lt;/a&gt;\n\t\t\t\t\t&lt;ul&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/2&quot;&gt;Teknologi Industri Pertanian&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/3&quot;&gt;Agribisnis&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/4&quot;&gt;Agroteknologi&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/5&quot;&gt;Ilmu Kelautan&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/35&quot;&gt;Manajemen Sumberdaya Perairan&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;/ul&gt;\n\t\t\t\t&lt;/li&gt;\n\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/3&quot;&gt;Ekonomi&lt;/a&gt;\n\t\t\t\t\t&lt;ul&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/6&quot;&gt;Ekonomi Pembangunan&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/7&quot;&gt;Manajemen&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/8&quot;&gt;Akuntansi&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/21&quot;&gt;Akuntansi Sektor Publik&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/22&quot;&gt;Magister Manajemen&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/25&quot;&gt;Magister Akuntansi&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/26&quot;&gt;D3 Enterpreneurship&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;/ul&gt;\n\t\t\t\t&lt;/li&gt;\n\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/4&quot;&gt;Teknik&lt;/a&gt;\n\t\t\t\t\t&lt;ul&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/9&quot;&gt;Teknik Industri&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/10&quot;&gt;Teknik Informatika&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/11&quot;&gt;Manajemen Informatika&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/19&quot;&gt;Teknik Multimedia Dan Jaringan&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/20&quot;&gt;Mekatronika&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/23&quot;&gt;Teknik Elektro&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/31&quot;&gt;Sistem Informasi&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/32&quot;&gt;Teknik Mesin&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/33&quot;&gt;Teknik Mekatronika&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;/ul&gt;\n\t\t\t\t&lt;/li&gt;\n\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/5&quot;&gt;Ilmu Sosial Dan Ilmu Budaya&lt;/a&gt;\n\t\t\t\t\t&lt;ul&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/12&quot;&gt;Sosiologi&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/13&quot;&gt;Ilmu Komunikasi&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/14&quot;&gt;Psikologi&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/15&quot;&gt;Sastra Inggris&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;/ul&gt;\n\t\t\t\t&lt;/li&gt;\n\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/6&quot;&gt;Ilmu-ilmu Keislaman&lt;/a&gt;\n\t\t\t\t\t&lt;ul&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/16&quot;&gt;Ekonomi Syariah&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/17&quot;&gt;Hukum Bisnis Syariah&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;/ul&gt;\n\t\t\t\t&lt;/li&gt;\n\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/7&quot;&gt;Ilmu Pendidikan&lt;/a&gt;\n\t\t\t\t\t&lt;ul&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/18&quot;&gt;Pgsd&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/27&quot;&gt;Pendidikan Bhs Dan Sastra Indonesia&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/28&quot;&gt;Pendidikan Informatika&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/29&quot;&gt;Pendidikan Ipa&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/30&quot;&gt;Pgpaud&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t\t\t&lt;/ul&gt;\n\t\t\t&lt;/div&gt; &lt;!-- navigation box --&gt;\n\t\t\t\n\t\t\t&lt;div class=&quot;box inner&quot;&gt;\n\t\t\t\t&lt;h5&gt;Total Jurnal&lt;/h5&gt;\n\t\t\t\t&lt;ul class=&quot;sidebar_list&quot;&gt;\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/1&quot;&gt;Hukum&lt;/a&gt;&lt;span&gt;1485&lt;/span&gt;&lt;/li&gt;\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/2&quot;&gt;Pertanian&lt;/a&gt;&lt;span&gt;2178&lt;/span&gt;&lt;/li&gt;\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/3&quot;&gt;Ekonomi&lt;/a&gt;&lt;span&gt;2889&lt;/span&gt;&lt;/li&gt;\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/4&quot;&gt;Teknik&lt;/a&gt;&lt;span&gt;2299&lt;/span&gt;&lt;/li&gt;\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/5&quot;&gt;Ilmu Sosial Dan Ilmu Budaya&lt;/a&gt;&lt;span&gt;2533&lt;/span&gt;&lt;/li&gt;\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/6&quot;&gt;Ilmu-ilmu Keislaman&lt;/a&gt;&lt;span&gt;975&lt;/span&gt;&lt;/li&gt;\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/7&quot;&gt;Ilmu Pendidikan&lt;/a&gt;&lt;span&gt;2308&lt;/span&gt;&lt;/li&gt;\t\t\t\t\t\n\t\t\t\t\t\t\t\t&lt;/ul&gt;\n\t\t\t&lt;/div&gt; &lt;!-- categories box --&gt;\n\t\t\t\n\t\t\t\t\t\t&lt;div class=&quot;box inner&quot;&gt;\n\t\t\t\t&lt;h5&gt;Login&lt;/h5&gt;\n\t\t\t\t&lt;span&gt;Gunakan username dan password siakad Anda.&lt;/span&gt;\n\t\t\t\t&lt;div&gt;\n\t\t\t\t\t&lt;script type=&quot;text/javascript&quot; src=&quot;https://pta.trunojoyo.ac.id/js/ardizorro-md5.js&quot;&gt;&lt;/script&gt;\n\t\t\t\t\t&lt;form id=&quot;flogin&quot; action=&quot;https://pta.trunojoyo.ac.id/c_login&quot; method=&quot;post&quot;&gt;\n\t\t\t\t\t\t&lt;input class=&quot;input_text required&quot; type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; placeholder=&quot;username&quot;&gt;\n\t\t\t\t\t\t&lt;input class=&quot;input_text required&quot; type=&quot;password&quot; id=&quot;password&quot; name=&quot;pass&quot; placeholder=&quot;password&quot;&gt;\n\t\t\t\t\t\t&lt;input type=&quot;hidden&quot; id=&quot;token&quot; value=&quot;b911f562e771f93fcc79fb013cd2ae44&quot;&gt;\n\t\t\t\t\t\t&lt;input type=&quot;hidden&quot; id=&quot;pswd&quot; name=&quot;password&quot;&gt;\n\t\t\t\t\t\t&lt;div style=&quot;margin:5px 0 0 3px;&quot;&gt;\n\t\t\t\t\t\t\t&lt;button class=&quot;green button&quot; style=&quot;height:25px;&quot; type=&quot;submit&quot;&gt;Login&lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/icons/lock.png&quot;&gt;&lt;/button&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/form&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;script type=&quot;text/javascript&quot;&gt;\n\t\t\t\t$(document).ready(function() {\n\t\t\t\t\t$(&quot;#flogin&quot;).validate();\n\t\t\t\t});\n\t\t\t\t&lt;/script&gt;\n\t\t\t&lt;/div&gt; &lt;!-- advert box --&gt;\n\t\t\t\t\t\t\n\t\t\t&lt;div class=&quot;box inner&quot;&gt;\n\t\t\t\t&lt;h5&gt;Link&lt;/h5&gt;\n\t\t\t\t&lt;ul class=&quot;sidebar_list&quot;&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://trunojoyo.ac.id&quot;&gt;www.trunojoyo.ac.id&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://e-journal.dikti.go.id&quot;&gt;http://e-journal.dikti.go.id&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t&lt;/ul&gt;\n\t\t\t&lt;/div&gt; &lt;!-- categories box --&gt;\n\t\t\t\n\t\t&lt;/div&gt;\n\t\t\n\t\t&lt;footer id=&quot;footer&quot;&gt;\n\t\t\t\n\t\t\t&lt;div class=&quot;container_12&quot;&gt;\n\t\t\t\t&lt;div style=&quot;float:left; width:550px; padding:10px;&quot;&gt;\n\t\t\t\t\t&lt;h4&gt;About eJournal&lt;/h4&gt;\n\t\t\t\t\t&lt;p&gt;Electronic journals, also known as ejournals, e-journals are scholarly journals or intellectual magazines that can be accessed via electronic transmission. In practice, this means that they are usually published on the Web. They are a specialized form of electronic document: they have the purpose of providing material for academic research and study, and they are formatted approximately like journal articles in traditional printed journals.&lt;/p&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;div style=&quot;float:left; width:330px; padding:10px;&quot;&gt;\n\t\t\t\t\t&lt;h4&gt;Follow us!&lt;/h4&gt;\n\t\t\t\t\t&lt;ul class=&quot;socials&quot;&gt;\n\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/social/twitter_32.png&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/social/facebook_32.png&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/social/rss_32.png&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/social/google_plus_32.png&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/social/dribbble_32.png&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/social/vimeo_32.png&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t\t&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/social/youtube_32.png&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/li&gt;\n\t\t\t\t\t&lt;/ul&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t&lt;/div&gt;\n\t\t\t&lt;hr&gt;\n\t\t\t\n\t\t\t&lt;span id=&quot;copyright&quot;&gt;Copyright &amp;copy; 2012 PUSAT KOMPUTER Universitas Trunojoyo Madura. All Rights Reserved.&lt;/span&gt;\n\t\t&lt;/footer&gt;\n\t&lt;/div&gt; &lt;!-- wrapper --&gt;\n\t\n&lt;script type=&quot;text/javascript&quot;&gt;\n  function LoginPerpus() {\n\t$(&quot;#FloginPerpus&quot;).submit();\n  }\n  \n  var _gaq = _gaq || [];\n  _gaq.push([\&#39;_setAccount\&#39;, \&#39;UA-30717387-1\&#39;]);\n  _gaq.push([\&#39;_trackPageview\&#39;]);\n\n  (function() {\n    var ga = document.createElement(\&#39;script\&#39;); ga.type = \&#39;text/javascript\&#39;; ga.async = true;\n    ga.src = (\&#39;https:\&#39; == document.location.protocol ? \&#39;https://ssl\&#39; : \&#39;http://www\&#39;) + \&#39;.google-analytics.com/ga.js\&#39;;\n    var s = document.getElementsByTagName(\&#39;script\&#39;)[0]; s.parentNode.insertBefore(ga, s);\n  })();\n\n&lt;/script&gt;\n\n&lt;/body&gt;\n\n&lt;/html&gt;\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>  <span class="c1"># ini sebaiknya ditaruh di bagian atas file</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">laman_ss</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;/&gt;
+  &lt;title&gt;
+   Portal Tugas Akhir Univ. Trunojoyo
+  &lt;/title&gt;
+  &lt;link href=&quot;https://pta.trunojoyo.ac.id/css/reset.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+  &lt;link href=&quot;https://pta.trunojoyo.ac.id/css/style.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+  &lt;link href=&quot;https://pta.trunojoyo.ac.id/css/960_12_col.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+  &lt;link href=&quot;https://pta.trunojoyo.ac.id/css/smoothness/jquery-ui-1.8.18.custom.css&quot; media=&quot;screen&quot; rel=&quot;stylesheet&quot;/&gt;
+  &lt;!--[if lte IE 8]&gt; &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/ie.css&quot; /&gt; &lt;![endif]--&gt;
+  &lt;!-- favicon --&gt;
+  &lt;link href=&quot;https://pta.trunojoyo.ac.id/images/favicon.ico&quot; rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot;/&gt;
+  &lt;!-- javascript --&gt;
+  &lt;script src=&quot;https://pta.trunojoyo.ac.id/js/jquery-1.7.1.min.js&quot; type=&quot;text/javascript&quot;&gt;
+  &lt;/script&gt;
+  &lt;script src=&quot;https://pta.trunojoyo.ac.id/js/jquery.validate.js&quot; type=&quot;text/javascript&quot;&gt;
+  &lt;/script&gt;
+  &lt;script src=&quot;https://pta.trunojoyo.ac.id/js/jquery.form.js&quot; type=&quot;text/javascript&quot;&gt;
+  &lt;/script&gt;
+  &lt;script src=&quot;https://pta.trunojoyo.ac.id/js/datepicker/js/jquery-ui-1.8.16.custom.min.js&quot; type=&quot;text/javascript&quot;&gt;
+  &lt;/script&gt;
+  &lt;script src=&quot;https://pta.trunojoyo.ac.id/js/datepicker/js/jquery.ui.datepicker-id.js&quot; type=&quot;text/javascript&quot;&gt;
+  &lt;/script&gt;
+  &lt;!--[if lte IE 7]&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		// Make menu 2 level, fix for IE &lt; 7
+		$(document).ready(function(){
+			$(&quot;#sidebar ul li&quot;).mouseover(function(){
+				var w = $(this).width()+&#39;px&#39;;				
+				$(this).find(&quot;ul&quot;).css(&#39;left&#39;,w);
+			});
+			$(&quot;#sidebar ul li&quot;).mouseout(function(){
+				$(this).find(&quot;ul&quot;).css(&#39;left&#39;,&#39;-9999px&#39;);
+			});
+		});
+	&lt;/script&gt;
+	 &lt;![endif]--&gt;
+  &lt;meta content=&quot;fjT5XAQAmDWjsF1Tn4-az3Hum8OJQjfh1kqmrjecf00&quot; name=&quot;google-site-verification&quot;/&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div id=&quot;transBox&quot;&gt;
+   &lt;img src=&quot;https://pta.trunojoyo.ac.id/images/loading.gif&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;wrapper&quot;&gt;
+   &lt;header id=&quot;header&quot;&gt;
+    &lt;a href=&quot;index.html&quot; id=&quot;logo&quot;&gt;
+     &lt;img alt=&quot;Mirage&quot; src=&quot;https://pta.trunojoyo.ac.id/images/logo.png&quot;/&gt;
+    &lt;/a&gt;
+    &lt;div id=&quot;counts&quot;&gt;
+     &lt;div&gt;
+      &lt;a href=&quot;#&quot;&gt;
+       &lt;span class=&quot;number&quot;&gt;
+        14678
+       &lt;/span&gt;
+       &lt;span class=&quot;follow&quot;&gt;
+        Journal
+       &lt;/span&gt;
+      &lt;/a&gt;
+     &lt;/div&gt;
+     &lt;!--
+				&lt;div&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;number&quot;&gt;877&lt;/span&gt;&lt;span class=&quot;like&quot;&gt;Like&lt;/span&gt;s&lt;/a&gt;&lt;/div&gt;
+				&lt;hr/&gt;
+				&lt;div&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;number&quot;&gt;7.418&lt;/span&gt;&lt;span class=&quot;subscribe&quot;&gt;Subscribe&lt;/span&gt;rs&lt;/a&gt;&lt;/div&gt;
+				--&gt;
+    &lt;/div&gt;
+    &lt;nav&gt;
+     &lt;ul id=&quot;topnav&quot;&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/&quot;&gt;
+        &lt;span&gt;
+         Beranda
+        &lt;/span&gt;
+       &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/&quot;&gt;
+        &lt;span&gt;
+         Pencarian
+        &lt;/span&gt;
+       &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_template/&quot;&gt;
+        &lt;span&gt;
+         Download
+        &lt;/span&gt;
+       &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://library.trunojoyo.ac.id/detil.php?id=23&quot; target=&quot;_blank&quot;&gt;
+        &lt;span&gt;
+         Petunjuk Upload
+        &lt;/span&gt;
+       &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;!--					
+					&lt;li&gt;&lt;a href=&quot;c_sugestion/&quot;&gt;&lt;span&gt;Saran &amp; Kritik&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+--&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_contact/&quot;&gt;
+        &lt;span&gt;
+         Kontak
+        &lt;/span&gt;
+       &lt;/a&gt;
+      &lt;/li&gt;
+     &lt;/ul&gt;
+    &lt;/nav&gt;
+   &lt;/header&gt;
+   &lt;div class=&quot;has_sidebar right&quot; id=&quot;content&quot;&gt;
+    &lt;div class=&quot;inner&quot; id=&quot;begin&quot;&gt;
+     &lt;h2&gt;
+      Daftar Karya Ilmiah
+     &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;!-- begin --&gt;
+    &lt;div id=&quot;content_journal&quot;&gt;
+     &lt;ul class=&quot;items list_style&quot;&gt;
+      &lt;li data-cat=&quot;#luxury&quot; data-id=&quot;id-1&quot;&gt;
+       &lt;!-- &lt;div class=&quot;preview&quot; style=&quot;float:left;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;frame&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/portfolio/06.jpg&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/div&gt; --&gt;
+       &lt;div style=&quot;float:left; width:auto&quot;&gt;
+        &lt;a class=&quot;title&quot; href=&quot;#&quot;&gt;
+         STRATEGI PENGEMBANGAN MAKANAN DAN MINUMAN KHAS PULAU GILIGENTING GUNA MENDUKUNG PARIWISATA BERKELANJUTAN
+        &lt;/a&gt;
+        &lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;
+         &lt;span&gt;
+          Penulis : Mohammad Maskur
+         &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;
+         &lt;span&gt;
+          Dosen Pembimbing I : Dr. Akhmad Farid, S.Pi., MT
+         &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;
+         &lt;span&gt;
+          Dosen Pembimbing II :Dr. Apri Arisandi, S.Pi., M.Si
+         &lt;/span&gt;
+        &lt;/div&gt;
+       &lt;/div&gt;
+       &lt;div style=&quot;clear:both;&quot;&gt;
+       &lt;/div&gt;
+       &lt;div style=&quot;margin: 15px 15px 15px 15px;&quot;&gt;
+        &lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+         &lt;b&gt;
+          Abstraksi
+         &lt;/b&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+         &lt;p align=&quot;justify&quot;&gt;
+          Makanan dan minuman khas merupakan ciri dari kekayaan sumberdaya alam dari suatu daerah, pentingnya memaksimalkan pariwisata Pulau Giligenting ditunjang dengan…
+         &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+         &lt;b&gt;
+          Abstraction
+         &lt;/b&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+         &lt;p align=&quot;justify&quot;&gt;
+          Typical food and drinks are characteristic of the richness of natural resources of an area, the importance of maximizing Giligenting…
+         &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+         &lt;a class=&quot;gray button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/detail/170361100003&quot;&gt;
+          &lt;span&gt;
+           Selengkapnya
+          &lt;/span&gt;
+          &lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/button/forward.png&quot;/&gt;
+         &lt;/a&gt;
+        &lt;/div&gt;
+       &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li data-cat=&quot;#luxury&quot; data-id=&quot;id-1&quot;&gt;
+       &lt;!-- &lt;div class=&quot;preview&quot; style=&quot;float:left;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;frame&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/portfolio/06.jpg&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/div&gt; --&gt;
+       &lt;div style=&quot;float:left; width:auto&quot;&gt;
+        &lt;a class=&quot;title&quot; href=&quot;#&quot;&gt;
+         PERUMUSAN SANKSI PIDANA BAGI MASYARAKAT SEKITAR HUTAN YANG MELAKUKAN PENCURIAN KAYU MILIK NEGARA DALAM UNDANG-UNDANG NOMOR 18 TAHUN 2013
+        &lt;/a&gt;
+        &lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;
+         &lt;span&gt;
+          Penulis : Moch. Steven
+         &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;
+         &lt;span&gt;
+          Dosen Pembimbing I : Dr. Wartiningsih, S.H., M.Hum
+         &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;
+         &lt;span&gt;
+          Dosen Pembimbing II :
+         &lt;/span&gt;
+        &lt;/div&gt;
+       &lt;/div&gt;
+       &lt;div style=&quot;clear:both;&quot;&gt;
+       &lt;/div&gt;
+       &lt;div style=&quot;margin: 15px 15px 15px 15px;&quot;&gt;
+        &lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+         &lt;b&gt;
+          Abstraksi
+         &lt;/b&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+         &lt;p align=&quot;justify&quot;&gt;
+          ABSTRAK
+Akhir-akhir ini semakin maraknya pencurian kayu milik negara di sekitar hutan oleh masyarakat. akan tetapi perumusan sanksi pidana dalam…
+         &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+         &lt;b&gt;
+          Abstraction
+         &lt;/b&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+         &lt;p align=&quot;justify&quot;&gt;
+          ABSTRACK
+Lately, there has been more and more rampant robbery of state timber around the forest by the community. However,…
+         &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+         &lt;a class=&quot;gray button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/detail/170111100053&quot;&gt;
+          &lt;span&gt;
+           Selengkapnya
+          &lt;/span&gt;
+          &lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/button/forward.png&quot;/&gt;
+         &lt;/a&gt;
+        &lt;/div&gt;
+       &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li data-cat=&quot;#luxury&quot; data-id=&quot;id-1&quot;&gt;
+       &lt;!-- &lt;div class=&quot;preview&quot; style=&quot;float:left;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;frame&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/portfolio/06.jpg&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/div&gt; --&gt;
+       &lt;div style=&quot;float:left; width:auto&quot;&gt;
+        &lt;a class=&quot;title&quot; href=&quot;#&quot;&gt;
+         Peran Teor Motivasi Herzberg Sebagai Mediator Self Efficacy, Lingkungan Kerja Dalam Meningkatkan Prestasi Kerja Pegawai ( Kantor Jasa Penilai Publik Guntur Eki Andri dan Rekan Kota Surabaya )
+        &lt;/a&gt;
+        &lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;
+         &lt;span&gt;
+          Penulis : Widha Deby Andrea
+         &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;
+         &lt;span&gt;
+          Dosen Pembimbing I : Mochammad Isa Anshori, S.E., M.Si.
+         &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;
+         &lt;span&gt;
+          Dosen Pembimbing II :
+         &lt;/span&gt;
+        &lt;/div&gt;
+       &lt;/div&gt;
+       &lt;div style=&quot;clear:both;&quot;&gt;
+       &lt;/div&gt;
+       &lt;div style=&quot;margin: 15px 15px 15px 15px;&quot;&gt;
+        &lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+         &lt;b&gt;
+          Abstraksi
+         &lt;/b&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+         &lt;p align=&quot;justify&quot;&gt;
+          Penelitian ini bertujuan untuk dapat mengetahui tentang pengaruh motivasi kerja sebagai mediator self efficacy dan lingkungan kerja terhadap prestasi kerja…
+         &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+         &lt;b&gt;
+          Abstraction
+         &lt;/b&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+         &lt;p align=&quot;justify&quot;&gt;
+          This study aims to find out about the effect of work motivation as a mediator of self efficacy and work…
+         &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+         &lt;a class=&quot;gray button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/detail/160211100116&quot;&gt;
+          &lt;span&gt;
+           Selengkapnya
+          &lt;/span&gt;
+          &lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/button/forward.png&quot;/&gt;
+         &lt;/a&gt;
+        &lt;/div&gt;
+       &lt;/div&gt;
+      &lt;/li&gt;
+     &lt;/ul&gt;
+     &lt;div class=&quot;inner&quot; id=&quot;end&quot;&gt;
+      &lt;ol class=&quot;pagination&quot;&gt;
+       &lt;li&gt;
+        &lt;a class=&quot;pag_button selected&quot;&gt;
+         1
+        &lt;/a&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+        &lt;a class=&quot;pag_button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/index/2&quot;&gt;
+         2
+        &lt;/a&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+        &lt;a class=&quot;pag_button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/index/3&quot;&gt;
+         3
+        &lt;/a&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+        &lt;a class=&quot;pag_button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/index/2&quot;&gt;
+         &amp;gt;
+        &lt;/a&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+        &lt;a class=&quot;pag_button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/index/4893&quot;&gt;
+         »
+        &lt;/a&gt;
+       &lt;/li&gt;
+      &lt;/ol&gt;
+     &lt;/div&gt;
+     &lt;!-- end --&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;!-- content --&gt;
+   &lt;div class=&quot;left&quot; id=&quot;sidebar&quot;&gt;
+    &lt;div class=&quot;box sidebar_nav&quot;&gt;
+     &lt;h5&gt;
+      Journal
+     &lt;/h5&gt;
+     &lt;ul&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/1&quot;&gt;
+        Hukum
+       &lt;/a&gt;
+       &lt;ul&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/1&quot;&gt;
+          Ilmu Hukum
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/24&quot;&gt;
+          Magister Ilmu Hukum
+         &lt;/a&gt;
+        &lt;/li&gt;
+       &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/2&quot;&gt;
+        Pertanian
+       &lt;/a&gt;
+       &lt;ul&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/2&quot;&gt;
+          Teknologi Industri Pertanian
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/3&quot;&gt;
+          Agribisnis
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/4&quot;&gt;
+          Agroteknologi
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/5&quot;&gt;
+          Ilmu Kelautan
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/35&quot;&gt;
+          Manajemen Sumberdaya Perairan
+         &lt;/a&gt;
+        &lt;/li&gt;
+       &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/3&quot;&gt;
+        Ekonomi
+       &lt;/a&gt;
+       &lt;ul&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/6&quot;&gt;
+          Ekonomi Pembangunan
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/7&quot;&gt;
+          Manajemen
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/8&quot;&gt;
+          Akuntansi
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/21&quot;&gt;
+          Akuntansi Sektor Publik
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/22&quot;&gt;
+          Magister Manajemen
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/25&quot;&gt;
+          Magister Akuntansi
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/26&quot;&gt;
+          D3 Enterpreneurship
+         &lt;/a&gt;
+        &lt;/li&gt;
+       &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/4&quot;&gt;
+        Teknik
+       &lt;/a&gt;
+       &lt;ul&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/9&quot;&gt;
+          Teknik Industri
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/10&quot;&gt;
+          Teknik Informatika
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/11&quot;&gt;
+          Manajemen Informatika
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/19&quot;&gt;
+          Teknik Multimedia Dan Jaringan
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/20&quot;&gt;
+          Mekatronika
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/23&quot;&gt;
+          Teknik Elektro
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/31&quot;&gt;
+          Sistem Informasi
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/32&quot;&gt;
+          Teknik Mesin
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/33&quot;&gt;
+          Teknik Mekatronika
+         &lt;/a&gt;
+        &lt;/li&gt;
+       &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/5&quot;&gt;
+        Ilmu Sosial Dan Ilmu Budaya
+       &lt;/a&gt;
+       &lt;ul&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/12&quot;&gt;
+          Sosiologi
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/13&quot;&gt;
+          Ilmu Komunikasi
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/14&quot;&gt;
+          Psikologi
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/15&quot;&gt;
+          Sastra Inggris
+         &lt;/a&gt;
+        &lt;/li&gt;
+       &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/6&quot;&gt;
+        Ilmu-ilmu Keislaman
+       &lt;/a&gt;
+       &lt;ul&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/16&quot;&gt;
+          Ekonomi Syariah
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/17&quot;&gt;
+          Hukum Bisnis Syariah
+         &lt;/a&gt;
+        &lt;/li&gt;
+       &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/7&quot;&gt;
+        Ilmu Pendidikan
+       &lt;/a&gt;
+       &lt;ul&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/18&quot;&gt;
+          Pgsd
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/27&quot;&gt;
+          Pendidikan Bhs Dan Sastra Indonesia
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/28&quot;&gt;
+          Pendidikan Informatika
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/29&quot;&gt;
+          Pendidikan Ipa
+         &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+         &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byprod/30&quot;&gt;
+          Pgpaud
+         &lt;/a&gt;
+        &lt;/li&gt;
+       &lt;/ul&gt;
+      &lt;/li&gt;
+     &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- navigation box --&gt;
+    &lt;div class=&quot;box inner&quot;&gt;
+     &lt;h5&gt;
+      Total Jurnal
+     &lt;/h5&gt;
+     &lt;ul class=&quot;sidebar_list&quot;&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/1&quot;&gt;
+        Hukum
+       &lt;/a&gt;
+       &lt;span&gt;
+        1485
+       &lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/2&quot;&gt;
+        Pertanian
+       &lt;/a&gt;
+       &lt;span&gt;
+        2178
+       &lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/3&quot;&gt;
+        Ekonomi
+       &lt;/a&gt;
+       &lt;span&gt;
+        2889
+       &lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/4&quot;&gt;
+        Teknik
+       &lt;/a&gt;
+       &lt;span&gt;
+        2299
+       &lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/5&quot;&gt;
+        Ilmu Sosial Dan Ilmu Budaya
+       &lt;/a&gt;
+       &lt;span&gt;
+        2533
+       &lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/6&quot;&gt;
+        Ilmu-ilmu Keislaman
+       &lt;/a&gt;
+       &lt;span&gt;
+        975
+       &lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;https://pta.trunojoyo.ac.id/c_search/byfac/7&quot;&gt;
+        Ilmu Pendidikan
+       &lt;/a&gt;
+       &lt;span&gt;
+        2308
+       &lt;/span&gt;
+      &lt;/li&gt;
+     &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- categories box --&gt;
+    &lt;div class=&quot;box inner&quot;&gt;
+     &lt;h5&gt;
+      Login
+     &lt;/h5&gt;
+     &lt;span&gt;
+      Gunakan username dan password siakad Anda.
+     &lt;/span&gt;
+     &lt;div&gt;
+      &lt;script src=&quot;https://pta.trunojoyo.ac.id/js/ardizorro-md5.js&quot; type=&quot;text/javascript&quot;&gt;
+      &lt;/script&gt;
+      &lt;form action=&quot;https://pta.trunojoyo.ac.id/c_login&quot; id=&quot;flogin&quot; method=&quot;post&quot;&gt;
+       &lt;input class=&quot;input_text required&quot; id=&quot;username&quot; name=&quot;username&quot; placeholder=&quot;username&quot; type=&quot;text&quot;/&gt;
+       &lt;input class=&quot;input_text required&quot; id=&quot;password&quot; name=&quot;pass&quot; placeholder=&quot;password&quot; type=&quot;password&quot;/&gt;
+       &lt;input id=&quot;token&quot; type=&quot;hidden&quot; value=&quot;b911f562e771f93fcc79fb013cd2ae44&quot;/&gt;
+       &lt;input id=&quot;pswd&quot; name=&quot;password&quot; type=&quot;hidden&quot;/&gt;
+       &lt;div style=&quot;margin:5px 0 0 3px;&quot;&gt;
+        &lt;button class=&quot;green button&quot; style=&quot;height:25px;&quot; type=&quot;submit&quot;&gt;
+         Login
+         &lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/icons/lock.png&quot;/&gt;
+        &lt;/button&gt;
+       &lt;/div&gt;
+      &lt;/form&gt;
+     &lt;/div&gt;
+     &lt;script type=&quot;text/javascript&quot;&gt;
+      $(document).ready(function() {
+					$(&quot;#flogin&quot;).validate();
+				});
+     &lt;/script&gt;
+    &lt;/div&gt;
+    &lt;!-- advert box --&gt;
+    &lt;div class=&quot;box inner&quot;&gt;
+     &lt;h5&gt;
+      Link
+     &lt;/h5&gt;
+     &lt;ul class=&quot;sidebar_list&quot;&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;http://trunojoyo.ac.id&quot; target=&quot;_blank&quot;&gt;
+        www.trunojoyo.ac.id
+       &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+       &lt;a href=&quot;http://e-journal.dikti.go.id&quot; target=&quot;_blank&quot;&gt;
+        http://e-journal.dikti.go.id
+       &lt;/a&gt;
+      &lt;/li&gt;
+     &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- categories box --&gt;
+   &lt;/div&gt;
+   &lt;footer id=&quot;footer&quot;&gt;
+    &lt;div class=&quot;container_12&quot;&gt;
+     &lt;div style=&quot;float:left; width:550px; padding:10px;&quot;&gt;
+      &lt;h4&gt;
+       About eJournal
+      &lt;/h4&gt;
+      &lt;p&gt;
+       Electronic journals, also known as ejournals, e-journals are scholarly journals or intellectual magazines that can be accessed via electronic transmission. In practice, this means that they are usually published on the Web. They are a specialized form of electronic document: they have the purpose of providing material for academic research and study, and they are formatted approximately like journal articles in traditional printed journals.
+      &lt;/p&gt;
+     &lt;/div&gt;
+     &lt;div style=&quot;float:left; width:330px; padding:10px;&quot;&gt;
+      &lt;h4&gt;
+       Follow us!
+      &lt;/h4&gt;
+      &lt;ul class=&quot;socials&quot;&gt;
+       &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+         &lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/social/twitter_32.png&quot;/&gt;
+        &lt;/a&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+         &lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/social/facebook_32.png&quot;/&gt;
+        &lt;/a&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+         &lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/social/rss_32.png&quot;/&gt;
+        &lt;/a&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+         &lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/social/google_plus_32.png&quot;/&gt;
+        &lt;/a&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+         &lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/social/dribbble_32.png&quot;/&gt;
+        &lt;/a&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+         &lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/social/vimeo_32.png&quot;/&gt;
+        &lt;/a&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+         &lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/social/youtube_32.png&quot;/&gt;
+        &lt;/a&gt;
+       &lt;/li&gt;
+      &lt;/ul&gt;
+     &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;hr/&gt;
+    &lt;span id=&quot;copyright&quot;&gt;
+     Copyright © 2012 PUSAT KOMPUTER Universitas Trunojoyo Madura. All Rights Reserved.
+    &lt;/span&gt;
+   &lt;/footer&gt;
+  &lt;/div&gt;
+  &lt;!-- wrapper --&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+   function LoginPerpus() {
+	$(&quot;#FloginPerpus&quot;).submit();
+  }
+  
+  var _gaq = _gaq || [];
+  _gaq.push([&#39;_setAccount&#39;, &#39;UA-30717387-1&#39;]);
+  _gaq.push([&#39;_trackPageview&#39;]);
+
+  (function() {
+    var ga = document.createElement(&#39;script&#39;); ga.type = &#39;text/javascript&#39;; ga.async = true;
+    ga.src = (&#39;https:&#39; == document.location.protocol ? &#39;https://ssl&#39; : &#39;http://www&#39;) + &#39;.google-analytics.com/ga.js&#39;;
+    var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ambil semua elemen tertentu ke dalam list</span>
+<span class="n">kontainer_berita</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;content_journal&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">kontainer_berita</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;div id=&quot;content_journal&quot;&gt;
+&lt;ul class=&quot;items list_style&quot;&gt;
+&lt;li data-cat=&quot;#luxury&quot; data-id=&quot;id-1&quot;&gt;
+&lt;!-- &lt;div class=&quot;preview&quot; style=&quot;float:left;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;frame&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/portfolio/06.jpg&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/div&gt; --&gt;
+&lt;div style=&quot;float:left; width:auto&quot;&gt;
+&lt;a class=&quot;title&quot; href=&quot;#&quot;&gt;STRATEGI PENGEMBANGAN MAKANAN DAN MINUMAN KHAS PULAU GILIGENTING GUNA MENDUKUNG PARIWISATA BERKELANJUTAN&lt;/a&gt;
+&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Penulis : Mohammad Maskur&lt;/span&gt;&lt;/div&gt;
+&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing I : Dr. Akhmad Farid, S.Pi., MT&lt;/span&gt;&lt;/div&gt;
+&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing II :Dr. Apri Arisandi, S.Pi., M.Si&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;margin: 15px 15px 15px 15px;&quot;&gt;
+&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraksi&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;p align=&quot;justify&quot;&gt;Makanan dan minuman khas merupakan ciri dari kekayaan sumberdaya alam dari suatu daerah, pentingnya memaksimalkan pariwisata Pulau Giligenting ditunjang dengan…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraction&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;p align=&quot;justify&quot;&gt;Typical food and drinks are characteristic of the richness of natural resources of an area, the importance of maximizing Giligenting…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+&lt;a class=&quot;gray button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/detail/170361100003&quot;&gt;&lt;span&gt;Selengkapnya&lt;/span&gt;&lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/button/forward.png&quot;/&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li data-cat=&quot;#luxury&quot; data-id=&quot;id-1&quot;&gt;
+&lt;!-- &lt;div class=&quot;preview&quot; style=&quot;float:left;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;frame&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/portfolio/06.jpg&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/div&gt; --&gt;
+&lt;div style=&quot;float:left; width:auto&quot;&gt;
+&lt;a class=&quot;title&quot; href=&quot;#&quot;&gt;PERUMUSAN SANKSI PIDANA BAGI MASYARAKAT SEKITAR HUTAN YANG MELAKUKAN PENCURIAN KAYU MILIK NEGARA DALAM UNDANG-UNDANG NOMOR 18 TAHUN 2013&lt;/a&gt;
+&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Penulis : Moch. Steven&lt;/span&gt;&lt;/div&gt;
+&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing I : Dr. Wartiningsih, S.H., M.Hum&lt;/span&gt;&lt;/div&gt;
+&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing II :&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;margin: 15px 15px 15px 15px;&quot;&gt;
+&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraksi&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;p align=&quot;justify&quot;&gt;ABSTRAK
+Akhir-akhir ini semakin maraknya pencurian kayu milik negara di sekitar hutan oleh masyarakat. akan tetapi perumusan sanksi pidana dalam…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraction&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;p align=&quot;justify&quot;&gt;ABSTRACK
+Lately, there has been more and more rampant robbery of state timber around the forest by the community. However,…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+&lt;a class=&quot;gray button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/detail/170111100053&quot;&gt;&lt;span&gt;Selengkapnya&lt;/span&gt;&lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/button/forward.png&quot;/&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li data-cat=&quot;#luxury&quot; data-id=&quot;id-1&quot;&gt;
+&lt;!-- &lt;div class=&quot;preview&quot; style=&quot;float:left;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;frame&quot;&gt;&lt;img src=&quot;https://pta.trunojoyo.ac.id/images/portfolio/06.jpg&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/div&gt; --&gt;
+&lt;div style=&quot;float:left; width:auto&quot;&gt;
+&lt;a class=&quot;title&quot; href=&quot;#&quot;&gt;Peran Teor Motivasi Herzberg Sebagai Mediator Self Efficacy, Lingkungan Kerja Dalam Meningkatkan Prestasi Kerja Pegawai ( Kantor Jasa Penilai Publik Guntur Eki Andri dan Rekan Kota Surabaya )&lt;/a&gt;
+&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Penulis : Widha Deby Andrea&lt;/span&gt;&lt;/div&gt;
+&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing I : Mochammad Isa Anshori, S.E., M.Si.&lt;/span&gt;&lt;/div&gt;
+&lt;div style=&quot;padding:2px 2px 2px 2px;&quot;&gt;&lt;span&gt;Dosen Pembimbing II :&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;margin: 15px 15px 15px 15px;&quot;&gt;
+&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraksi&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;p align=&quot;justify&quot;&gt;Penelitian ini bertujuan untuk dapat mengetahui tentang pengaruh motivasi kerja sebagai mediator self efficacy dan lingkungan kerja terhadap prestasi kerja…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;&lt;b&gt;Abstraction&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;p align=&quot;justify&quot;&gt;This study aims to find out about the effect of work motivation as a mediator of self efficacy and work…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 25px 0px 15px 0px;&quot;&gt;
+&lt;a class=&quot;gray button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/detail/160211100116&quot;&gt;&lt;span&gt;Selengkapnya&lt;/span&gt;&lt;img alt=&quot;&quot; src=&quot;https://pta.trunojoyo.ac.id/images/button/forward.png&quot;/&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;inner&quot; id=&quot;end&quot;&gt;
+&lt;ol class=&quot;pagination&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;pag_button selected&quot;&gt;1&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class=&quot;pag_button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/index/2&quot;&gt;2&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class=&quot;pag_button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/index/3&quot;&gt;3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class=&quot;pag_button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/index/2&quot;&gt;&amp;gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class=&quot;pag_button&quot; href=&quot;https://pta.trunojoyo.ac.id/welcome/index/4893&quot;&gt;»&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt; &lt;!-- end --&gt;
+&lt;/div&gt;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">judul_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ringkasan_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">berita</span> <span class="ow">in</span> <span class="n">kontainer_berita</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">judul</span> <span class="ow">in</span> <span class="n">berita</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;float:left; width:auto&quot;</span><span class="p">):</span>
+        <span class="n">judul_string</span> <span class="o">=</span> <span class="n">judul</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+        <span class="c1"># buang spasi yang tidak diperlukan</span>
+        <span class="n">judul_rapi</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">judul_string</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="n">judul_rapi</span><span class="p">)</span>
+        <span class="c1"># append judul ke list</span>
+        <span class="n">judul_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">judul_rapi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>STRATEGI PENGEMBANGAN MAKANAN DAN MINUMAN KHAS PULAU GILIGENTING GUNA MENDUKUNG PARIWISATA BERKELANJUTAN Penulis : Mohammad Maskur Dosen Pembimbing I : Dr. Akhmad Farid, S.Pi., MT Dosen Pembimbing II :Dr. Apri Arisandi, S.Pi., M.Si
+PERUMUSAN SANKSI PIDANA BAGI MASYARAKAT SEKITAR HUTAN YANG MELAKUKAN PENCURIAN KAYU MILIK NEGARA DALAM UNDANG-UNDANG NOMOR 18 TAHUN 2013 Penulis : Moch. Steven Dosen Pembimbing I : Dr. Wartiningsih, S.H., M.Hum Dosen Pembimbing II :
+Peran Teor Motivasi Herzberg Sebagai Mediator Self Efficacy, Lingkungan Kerja Dalam Meningkatkan Prestasi Kerja Pegawai ( Kantor Jasa Penilai Publik Guntur Eki Andri dan Rekan Kota Surabaya ) Penulis : Widha Deby Andrea Dosen Pembimbing I : Mochammad Isa Anshori, S.E., M.Si. Dosen Pembimbing II :
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Billy Morgen Simbolon - 200411100057
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
