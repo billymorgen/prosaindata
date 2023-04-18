@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Getting the rank of every sentence using textrank &#8212; Projek Sains Data</title>
+    <title>Page Rank &#8212; Projek Sains Data</title>
   
   
   
@@ -166,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting the rank of every sentence using textrank</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Page Rank</a></li>
 </ul>
 
     </div>
@@ -379,7 +379,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Getting the rank of every sentence using textrank</h1>
+    <h1>Page Rank</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,7 +393,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>#Page Rank</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="page-rank">
+<h1>Page Rank<a class="headerlink" href="#page-rank" title="Permalink to this heading">#</a></h1>
 <p>##Membuat Graph</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -424,7 +425,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/17a003e66a03284f51f848b27b13a3a54711dd23787ad3cdaa7b3f25dad72321.png" src="_images/17a003e66a03284f51f848b27b13a3a54711dd23787ad3cdaa7b3f25dad72321.png" />
+<img alt="_images/1af29430a36c898a472f125affcfd5f8a1dbff909b31aba7cfb75fc46feb468f.png" src="_images/1af29430a36c898a472f125affcfd5f8a1dbff909b31aba7cfb75fc46feb468f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -533,40 +534,12 @@ Node: 9 PageRank: 0.9008280386195725
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting PyPDF2
-  Downloading pypdf2-3.0.1-py3-none-any.whl (232 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/232.6 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">232.6/232.6 kB</span> <span class=" -Color -Color-Red">9.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: typing_extensions&gt;=3.10.0.0 in /usr/local/lib/python3.9/dist-packages (from PyPDF2) (4.5.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: PyPDF2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed PyPDF2-3.0.1
+Requirement already satisfied: PyPDF2 in /usr/local/lib/python3.9/dist-packages (3.0.1)
+Requirement already satisfied: typing_extensions&gt;=3.10.0.0 in /usr/local/lib/python3.9/dist-packages (from PyPDF2) (4.5.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting docx2txt
-  Downloading docx2txt-0.8.tar.gz (2.8 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
-Building wheels for collected packages: docx2txt
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for docx2txt (setup.py) ... ?25l?25hdone
-  Created wheel for docx2txt: filename=docx2txt-0.8-py3-none-any.whl size=3977 sha256=14f592c0844b490d78a96df7dd82c1d29bf68242e450f5aa89aee8a7ef9e4bfb
-  Stored in directory: /root/.cache/pip/wheels/40/75/01/e6c444034338bde9c7947d3467807f889123465c2371e77418
-Successfully built docx2txt
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: docx2txt
-Successfully installed docx2txt-0.8
+Requirement already satisfied: docx2txt in /usr/local/lib/python3.9/dist-packages (0.8)
 </pre></div>
 </div>
 </div>
@@ -822,8 +795,7 @@ The size of the list &quot;sentences&quot; is: 0
 </div>
 </div>
 </div>
-<div class="section" id="getting-the-rank-of-every-sentence-using-textrank">
-<h1>Getting the rank of every sentence using textrank<a class="headerlink" href="#getting-the-rank-of-every-sentence-using-textrank" title="Permalink to this heading">#</a></h1>
+<p>###Getting the rank of every sentence using textrank</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ranks is a dictionary with key=node(sentences) and value=textrank (the rank of each of the sentences)</span>
