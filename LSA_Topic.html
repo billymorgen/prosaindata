@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Projek Sains Data</title>
+    <title>LSA Topic Modelling &#8212; Projek Sains Data</title>
   
   
   
@@ -155,7 +155,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tugas Proyek Saint Data</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="crawling_cakimin.html">Cakimin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crawling_berita.html">Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crawling_mahasiswa.html">Mahasiswa</a></li>
@@ -167,6 +167,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1"><a class="reference internal" href="Tugas_Pagerank.html">Page Rank</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">LSA Topic Modelling</a></li>
 </ul>
 
     </div>
@@ -368,9 +369,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -381,19 +380,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>LSA Topic Modelling</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -403,11 +394,32 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>#(LSA Topic Modelling)</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lsa-topic-modelling">
+<h1>LSA Topic Modelling<a class="headerlink" href="#lsa-topic-modelling" title="Permalink to this heading">#</a></h1>
 <p>##Crawling Youtube</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>selenium<span class="w"> </span>--quiet
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/6.6 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.1/6.6 MB</span> <span class=" -Color -Color-Red">33.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━ <span class=" -Color -Color-Green">5.9/6.6 MB</span> <span class=" -Color -Color-Red">85.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">6.5/6.6 MB</span> <span class=" -Color -Color-Red">87.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.6/6.6 MB</span> <span class=" -Color -Color-Red">59.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/384.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">384.9/384.9 kB</span> <span class=" -Color -Color-Red">29.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/58.3 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">58.3/58.3 kB</span> <span class=" -Color -Color-Red">6.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
 </pre></div>
 </div>
 </div>
@@ -540,7 +552,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ee8606ae-ef2e-4b56-8044-bbbc67293ed1">
+  <div id="df-521f64bd-ed2b-440f-a51b-89ce456f2efa">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -612,7 +624,7 @@ document.write(`
 </table>
 <p>1387 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ee8606ae-ef2e-4b56-8044-bbbc67293ed1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-521f64bd-ed2b-440f-a51b-89ce456f2efa')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -663,12 +675,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ee8606ae-ef2e-4b56-8044-bbbc67293ed1 button.colab-df-convert');
+          document.querySelector('#df-521f64bd-ed2b-440f-a51b-89ce456f2efa button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ee8606ae-ef2e-4b56-8044-bbbc67293ed1');
+          const element = document.querySelector('#df-521f64bd-ed2b-440f-a51b-89ce456f2efa');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -741,10 +753,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Topic 0:  [(&#39;prabowo&#39;, 0.5326947201497247), (&#39;pilih&#39;, 0.31261076436776564)]
-Topic 1:  [(&#39;prabowo&#39;, 0.7783033664873984), (&#39;mahfud&#39;, 0.06934307608877285)]
-Topic 2:  [(&#39;anies&#39;, 0.7037930935636727), (&#39;baswedan&#39;, 0.3119264286465498)]
-Topic 3:  [(&#39;anis&#39;, 0.6766881006403013), (&#39;ganjar&#39;, 0.28543484354884335)]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Topic 0:  [(&#39;prabowo&#39;, 0.5326991693629107), (&#39;pilih&#39;, 0.31263565958068074)]
+Topic 1:  [(&#39;prabowo&#39;, 0.7782057874860069), (&#39;mahfud&#39;, 0.06928949947635843)]
+Topic 2:  [(&#39;anies&#39;, 0.7037212441134982), (&#39;baswedan&#39;, 0.3131494371578829)]
+Topic 3:  [(&#39;anis&#39;, 0.6794171239454659), (&#39;ganjar&#39;, 0.27994680282534057)]
 </pre></div>
 </div>
 </div>
@@ -763,7 +775,7 @@ Topic 3:  [(&#39;anis&#39;, 0.6766881006403013), (&#39;ganjar&#39;, 0.2854348435
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0316f435-f266-4e73-b220-a87615b54a17">
+  <div id="df-1cc3df84-5d36-4b18-af48-628db8183bf6">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -795,46 +807,46 @@ Topic 3:  [(&#39;anis&#39;, 0.6766881006403013), (&#39;ganjar&#39;, 0.2854348435
     <tr>
       <th>0</th>
       <td>Apakah diantara mereka ada yg berpidato tentan...</td>
-      <td>0.055634</td>
-      <td>-0.032862</td>
-      <td>-0.007034</td>
-      <td>0.013853</td>
+      <td>0.055617</td>
+      <td>-0.032787</td>
+      <td>-0.006964</td>
+      <td>0.013536</td>
       <td>0</td>
     </tr>
     <tr>
       <th>1</th>
       <td>ANTARA ANIS ATAU PRABOWO AJA DEH, BUKAN DARI Y...</td>
-      <td>0.367163</td>
-      <td>0.134080</td>
-      <td>0.077245</td>
-      <td>0.288744</td>
+      <td>0.367188</td>
+      <td>0.134272</td>
+      <td>0.076289</td>
+      <td>0.291683</td>
       <td>0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Kalo bener 4 capres bakal maju, rakyat indones...</td>
-      <td>0.116064</td>
-      <td>-0.072709</td>
-      <td>0.002257</td>
-      <td>0.023523</td>
+      <td>0.116146</td>
+      <td>-0.072795</td>
+      <td>0.002200</td>
+      <td>0.024070</td>
       <td>0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>selama mak banteng masih mentereng, susah buat...</td>
-      <td>0.020691</td>
-      <td>-0.014272</td>
-      <td>-0.004419</td>
-      <td>-0.005225</td>
+      <td>0.020672</td>
+      <td>-0.014119</td>
+      <td>-0.004599</td>
+      <td>-0.001283</td>
       <td>0</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Presiden harus orang Jawa asli ganjar pranowo ...</td>
-      <td>0.113699</td>
-      <td>-0.030835</td>
-      <td>0.026165</td>
-      <td>0.066975</td>
+      <td>0.113702</td>
+      <td>-0.030740</td>
+      <td>0.026342</td>
+      <td>0.066167</td>
       <td>0</td>
     </tr>
     <tr>
@@ -849,53 +861,53 @@ Topic 3:  [(&#39;anis&#39;, 0.6766881006403013), (&#39;ganjar&#39;, 0.2854348435
     <tr>
       <th>1382</th>
       <td>Mending balikin lagi ke dpr buat pilih preside...</td>
-      <td>0.184134</td>
-      <td>-0.091087</td>
-      <td>-0.002330</td>
-      <td>0.024930</td>
+      <td>0.184198</td>
+      <td>-0.090975</td>
+      <td>-0.002967</td>
+      <td>0.027359</td>
       <td>0</td>
     </tr>
     <tr>
       <th>1383</th>
       <td>Capret calon kampret</td>
-      <td>0.021013</td>
-      <td>-0.009743</td>
-      <td>0.006539</td>
-      <td>0.007455</td>
+      <td>0.021027</td>
+      <td>-0.009810</td>
+      <td>0.005935</td>
+      <td>0.007046</td>
       <td>0</td>
     </tr>
     <tr>
       <th>1384</th>
       <td>Cuma ada 2 paslon, Ganjar (PDI-P, PPP, HANURA,...</td>
-      <td>0.174709</td>
-      <td>0.047648</td>
-      <td>0.089144</td>
-      <td>-0.019611</td>
+      <td>0.174720</td>
+      <td>0.047033</td>
+      <td>0.088944</td>
+      <td>-0.021096</td>
       <td>0</td>
     </tr>
     <tr>
       <th>1385</th>
       <td>Gua nyapres juga ah.\nCarany gimana sih gan-ag...</td>
-      <td>0.016712</td>
-      <td>-0.005056</td>
-      <td>0.003873</td>
-      <td>0.009741</td>
+      <td>0.016715</td>
+      <td>-0.005083</td>
+      <td>0.003858</td>
+      <td>0.009383</td>
       <td>0</td>
     </tr>
     <tr>
       <th>1386</th>
       <td>Aku pilih Petugas Rakyat\nbukan  Petugas Partai.</td>
-      <td>0.457620</td>
-      <td>-0.464786</td>
-      <td>-0.410216</td>
-      <td>-0.226018</td>
+      <td>0.457670</td>
+      <td>-0.464732</td>
+      <td>-0.410213</td>
+      <td>-0.223799</td>
       <td>0</td>
     </tr>
   </tbody>
 </table>
 <p>1387 rows × 6 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0316f435-f266-4e73-b220-a87615b54a17')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1cc3df84-5d36-4b18-af48-628db8183bf6')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -946,12 +958,12 @@ Topic 3:  [(&#39;anis&#39;, 0.6766881006403013), (&#39;ganjar&#39;, 0.2854348435
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0316f435-f266-4e73-b220-a87615b54a17 button.colab-df-convert');
+          document.querySelector('#df-1cc3df84-5d36-4b18-af48-628db8183bf6 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0316f435-f266-4e73-b220-a87615b54a17');
+          const element = document.querySelector('#df-1cc3df84-5d36-4b18-af48-628db8183bf6');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -980,11 +992,12 @@ Topic 3:  [(&#39;anis&#39;, 0.6766881006403013), (&#39;ganjar&#39;, 0.2854348435
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1020
-3     159
-2     130
-1      78
+3     154
+2     133
+1      80
 Name: Topik, dtype: int64
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1038,20 +1051,6 @@ Name: Topik, dtype: int64
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
