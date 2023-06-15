@@ -17,16 +17,16 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 ------------------
 data = pd.read_csv('BBTN.JK.csv')
 dataFrame = pd.DataFrame(data)
-dataFrame.shape
+dataFrame.head(10)
 ------------------
 
 
 [0;31m[0m
 [0;31mFileNotFoundError[0mTraceback (most recent call last)
-[0;32m<ipython-input-2-b7f83418b562>[0m in [0;36m<cell line: 1>[0;34m()[0m
+[0;32m<ipython-input-3-8d94f8c86120>[0m in [0;36m<cell line: 1>[0;34m()[0m
 [0;32m----> 1[0;31m [0mdata[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0;34m'BBTN.JK.csv'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0mdataFrame[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mDataFrame[0m[0;34m([0m[0mdata[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      3[0m [0mdataFrame[0m[0;34m.[0m[0mshape[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0mdataFrame[0m[0;34m.[0m[0mhead[0m[0;34m([0m[0;36m10[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/usr/local/lib/python3.10/dist-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
 [1;32m    209[0m                 [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
